@@ -1,0 +1,26 @@
+DONUT DAY TRADER — NO PYTHON REQUIRED
+
+This website needs to be deployed to Netlify because it uses a Netlify serverless function to securely call the DonutSMP API. Do not just double-click index.html.
+
+PUBLISH IT (all in your browser; no terminal/command line):
+1. Download and extract this ZIP.
+2. Sign in to GitHub and create a new repository named donut-day-trader.
+3. In the new repo, click Add file > Upload files.
+4. Open the extracted folder, select everything INSIDE it (index.html, netlify.toml, the netlify folder, and this file), and drag it into GitHub's upload area. Do not upload the outer folder as a nested folder. index.html and netlify.toml must sit at the repository root; the API function must be at netlify/functions/donut-api.js.
+5. Click Commit changes.
+6. Sign in to Netlify at https://app.netlify.com/start. Choose Add new project > Import an existing project, connect GitHub, and choose donut-day-trader.
+7. Deploy settings: keep the publish directory as . (dot), the functions directory as netlify/functions, and leave build command blank. The included netlify.toml already configures these values.
+8. After deploy finishes, open the Netlify URL ending in .netlify.app.
+9. Join DonutSMP in Minecraft and run /api. Copy the API key shown by the server. Do not share it in public or commit it to GitHub.
+10. Paste the key into Donut Day Trader and click Connect & load listings.
+
+USING THE WEBSITE:
+- Market scanner: search items and compare current auction asking prices.
+- Flip opportunities: load recent completed trades, then scan for listings priced below observed recent sale prices.
+- Completed trades: choose how many pages to load and click Load completed trades; this provides observed recent sales for comparisons.
+- Portfolio & P/L: after you actually buy something in-game, record the item, quantity, buy price and estimated exit price.
+
+IMPORTANT:
+- This is read-only market data. It does not buy or sell items or access your actual in-game balance.
+- Potential flip margins are estimates, not guaranteed profits. Item variants, enchantments, demand and listing availability can change the result.
+- The API key is entered on the website. Do not put it in the website source or in the GitHub repo. The dashboard remembers it only if you check “Remember on this browser”.
